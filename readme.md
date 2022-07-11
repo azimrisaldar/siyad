@@ -1,3 +1,20 @@
+### Install the project
+
+1. Pull the repository copy 
+ 
+2. configured the .env with respective database
+
+3. Install the project. `cd` into the project folder then run :
+
+```
+composer install
+php artisan migrate
+
+### Route to create and update the crud operation 
+http://127.0.0.1:8001/category - will create respective cateogory 
+http://127.0.0.1:8001/get-all-pages - show all pages tree ,
+click will dispay the tree
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
