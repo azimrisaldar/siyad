@@ -9,11 +9,14 @@
 ```
 composer install
 php artisan migrate
+```
 
 ### Route to create and update the crud operation 
-http://127.0.0.1:8001/category - will create respective cateogory 
-http://127.0.0.1:8001/get-all-pages - show all pages tree ,
-click will dispay the tree
+```
+http://127.0.0.1:8001/category - will create respective cateogory
+http://127.0.0.1:8001/get-all-pages - show all pages tree -click will dispay the tree
+
+```
 
 # Laravel PHP Framework
 
