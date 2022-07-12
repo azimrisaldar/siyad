@@ -132,7 +132,12 @@ class CategoryController extends Controller
 
     public function viewPage($slug){
 
-        dd($slug);
+        $pages = explode('/', $slug);
+
+        $category = Category::where('slug',end($pages))->first();
+
+        return $this->view('show',compact('category'));
+        
 
     }
 }

@@ -19,8 +19,7 @@ Route::get('/', function () {
 Route::resource('category', 'CategoryController');
 
 Route::get('view-page/{slug}',['as' => 'page-category','uses' => 'CategoryController@viewPage'], function($slug) {
-    $pages = explode('/', $slug);
-    dd(end($pages));
+    
 })->where('slug', '(.*)');
 
 

@@ -12,16 +12,18 @@
         <ul>
         @php ($ids = [])
             @foreach($categories as $category)
+                @php (array_push($ids,$category->slug))
                 @if($category->child()->count())
-                @php ($ids[] = 'page'.$category->id)
+                
                 <li><span><a href="{!! route('page-category',implode('/',$ids)) !!}">{{ $category->title }}</a></span>
                     <ul>
                         @include('category.category',['category' => $category->child()->get()])
                     </ul>
                 </li>
+                
             @else
                 
-                <li >
+                <li>
                 <a href="{!! route('page-category',implode('/',$ids)) !!}">{!! $category->title !!}</a>
                 </li>
             @endif

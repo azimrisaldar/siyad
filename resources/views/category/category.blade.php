@@ -1,7 +1,7 @@
 @php ($ids = [])
   @foreach($category as $child)
+    @php (array_push($ids,$child->slug))
     @if($child->child()->count())
-      @php ($ids[] = 'page'.$child->id)
       <li>
         <span><a href="{!! route('page-category',implode('/',$ids)) !!}">{{$child->title}}</a></span>
         <ul>
